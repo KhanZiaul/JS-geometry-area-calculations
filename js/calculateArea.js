@@ -24,3 +24,21 @@ document.getElementById('pentagon-btn').addEventListener('click',function(){
 
 });
 
+// calculate area of rectangle and parallelogram
+
+// rectangle area
+
+document.getElementById('rectangle-btn').addEventListener('click',function(){
+
+    calculateAreaOfRP('rectangle-title','rectangle-width-input','rectangle-length-input','table-body');
+
+});
+
+// parallelogram area
+
+document.getElementById('parallelogram-btn').addEventListener('click',function(){
+
+    calculateAreaOfRP('parallelogram-title','parallelogram-base-input','parallelogram-height-input','table-body');
+
+});
+
