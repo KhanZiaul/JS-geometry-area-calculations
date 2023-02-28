@@ -1,112 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Finding Area</title>
+<title>Finding Area</title>
 
-    <!-- daisyUI and tailwind link -->
+<!-- daisyUI and tailwind link -->
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- font awesome link-->
+<!-- font awesome link-->
 
-    <script src="https://kit.fontawesome.com/70a98cd510.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/70a98cd510.js" crossorigin="anonymous"></script>
 
 </head>
-
 <body class="p-8">
 
     <header>
 
         <!-- navigation -->
 
-        <nav>
-            <div class="lg:flex justify-between items-center bg-stone-200 px-10 py-5">
-                <div>
-                    <h2 class="text-4xl font-bold">Interactive </h2>
-                    <p class="text-2xl font-medium text-gray-500">Geometry Genius</p>
-                </div>
-
-                <div>
-                    <button id="blog-btn"
-                        class="py-2 px-5 text-white w-24 bg-sky-500 border-sky-400 rounded-lg font-bold hover:bg-sky-900">Blog</button>
-                </div>
+    <nav>
+         <div class="lg:flex justify-between items-center bg-stone-200 px-10 py-5">
+            <div>
+                <h2 class="text-4xl font-bold">Interactive </h2>
+                <p class="text-2xl font-medium text-gray-500">Geometry Genius</p>
             </div>
-        </nav>
+
+            <div>
+                <button id="blog-btn" class="py-2 px-5 text-white w-24 bg-sky-500 border-sky-400 rounded-lg font-bold hover:bg-sky-900">Blog</button>
+            </div>
+        </div>
+    </nav>
     </header>
 
     <main>
 
-        <section class="lg:flex gap-6">
+    <section class="lg:flex gap-6">
 
-            <!-- cards part -->
+        <!-- cards part -->
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 lg:w-[70%]">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 lg:w-[70%]">
 
+            <!-- triangle card -->
 
-
-                <!-- triangle card -->
-
-                <div id="triangle-card" class="card w-full bg-base-100 shadow-xl border-2">
-                    <figure class="px-10 pt-10">
-                        <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 id="triangle-title" class="card-title font-bold text-2xl text-gray-700">Triangle</h2>
-                        <p>Area(A) = 0.5 &#215; b &#215; h</p>
-                        <div class="flex justify-evenly gap-3 mb-5 mt-5">
-                            <div class="flex justify-center items-center gap-4">
-                                <input id="triangle-base-input" type="text" placeholder="b"
-                                    class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
-                                <p>cm</p>
-                            </div>
-                            <div class="flex justify-center items-center gap-4">
-                                <input id="triangle-height-input" type="text" placeholder="h"
-                                    class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
-                                <p>cm</p>
-                            </div>
-                        </div>
-                        <div class="card-actions">
-                            <button id="triangle-btn"
-                                class="p-3 text-white w-64 bg-sky-500 border-sky-300 rounded-lg font-bold hover:bg-sky-900">Calculate</button>
-                        </div>
-                    </div>
+          <div id="triangle-card" class="card w-full bg-base-100 shadow-xl border-2">
+            <figure class="px-10 pt-10">
+              <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="triangle-title" class="card-title font-bold text-2xl text-gray-700">Triangle</h2>
+              <p>Area(A) = 0.5 &#215; b &#215; h</p>
+              <div class="flex justify-evenly gap-3 mb-5 mt-5">
+                <div class="flex justify-center items-center gap-4">
+                    <input id="triangle-base-input" type="text" placeholder="b" class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
+                    <p>cm</p>
+                </div>      
+                <div class="flex justify-center items-center gap-4">
+                    <input id="triangle-height-input" type="text" placeholder="h" class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
+                    <p>cm</p>
                 </div>
+              </div>
+              <div class="card-actions">
+                <button id="triangle-btn" class="p-3 text-white w-64 bg-sky-500 border-sky-300 rounded-lg font-bold hover:bg-sky-900">Calculate</button>
+              </div>
+            </div>
+          </div>
 
-                <!-- rectangle card -->
+          <!-- rectangle card -->
 
-                <div id="rectangle-card" class="card w-full bg-base-100 shadow-xl border-2">
-                    <figure class="px-10 pt-20">
-                        <img src="/images/rectangle.png" alt="rectangle" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 id="rectangle-title" class="card-title font-bold text-2xl text-gray-700">Rectangle</h2>
-                        <p>Area(A) = w &#215; l</p>
-                        <div class="flex justify-evenly gap-3 mb-5 mt-3">
-                            <div class="flex justify-center items-center gap-4">
-                                <input id="rectangle-width-input" type="text" placeholder="w"
-                                    class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
-                                <p>cm</p>
-                            </div>
-                            <div class="flex justify-center items-center gap-4">
-                                <input id="rectangle-length-input" type="text" placeholder="l"
-                                    class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
-                                <p>cm</p>
-                            </div>
-                        </div>
-                        <div class="card-actions">
-                            <button id="rectangle-btn"
-                                class="p-3 text-white w-64 bg-sky-500 border-sky-300 rounded-lg font-bold hover:bg-sky-900">Calculate</button>
-                        </div>
-                    </div>
+          <div id="rectangle-card" class="card w-full bg-base-100 shadow-xl border-2">
+            <figure class="px-10 pt-20">
+              <img src="/images/rectangle.png" alt="rectangle" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="rectangle-title" class="card-title font-bold text-2xl text-gray-700">Rectangle</h2>
+              <p>Area(A) = w &#215; l</p>
+              <div class="flex justify-evenly gap-3 mb-5 mt-3">
+                <div class="flex justify-center items-center gap-4">
+                    <input id="rectangle-width-input" type="text" placeholder="w" class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
+                    <p>cm</p>
+                </div>  
+                <div class="flex justify-center items-center gap-4">
+                    <input id="rectangle-length-input" type="text" placeholder="l" class=" input-info w-16 h-8 max-w-xs bg-gray-100 font-normal px-2 rounded-lg" />
+                    <p>cm</p>
                 </div>
-
-                
+              </div>
+              <div class="card-actions">
+                <button id="rectangle-btn" class="p-3 text-white w-64 bg-sky-500 border-sky-300 rounded-lg font-bold hover:bg-sky-900">Calculate</button>
+              </div>
+            </div>
+          </div>
 
           <!-- parallelogram card -->
 
@@ -133,8 +120,6 @@
             </div>
           </div>
 
-          
-
           <!-- rhombus card -->
 
           <div id="rhombus-card" class="card w-full bg-base-100 shadow-xl border-2">
@@ -160,7 +145,6 @@
             </div>
           </div>
 
-          
           <!-- pentagon card -->
 
           <div id="pentagon-card" class="card w-full bg-base-100 shadow-xl border-2">
@@ -185,9 +169,6 @@
               </div>
             </div>
           </div>
-          
-          
-
 
           <!-- ellipse card -->
           
@@ -215,9 +196,9 @@
           </div>
         </div>  
 
-           <!-- area calculation  -->
+        <!-- area calculation  -->
 
-           <div class="mt-10 lg:w-[30%] rounded-lg border-2 h-full">
+        <div class="mt-10 lg:w-[30%] rounded-lg border-2 h-full">
  
             <h2 class="text-2xl font-bold underline text-center py-16">Area Calculation</h2>
             <div class="overflow-x-auto">
@@ -227,12 +208,13 @@
                     </tbody>
                 </table>
             </div>
-            
-            </div>
-        </section>
+
+        </div>
+    </section>
     </main>
 
+    <!-- script src -->
 
+    
 </body>
-
 </html>
