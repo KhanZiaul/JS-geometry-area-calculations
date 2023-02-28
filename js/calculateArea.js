@@ -42,3 +42,12 @@ document.getElementById('parallelogram-btn').addEventListener('click',function()
 
 });
 
+// calculate area of ellipse
+
+// ellipse area
+
+document.getElementById('ellipse-btn').addEventListener('click',function(){
+
+    calculateAreaOfEllipse('ellipse-title','ellipse- majorRadius-input','ellipse- minorRadius-input','table-body');
+
+});
