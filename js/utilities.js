@@ -1,4 +1,21 @@
+// set random background color function
 
+function randomBgColor(cardId) {
+
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+    document.getElementById(cardId).style.backgroundColor = bgColor;
+}
+
+// reset backgroung color function
+
+function resetBgColor(cardId) {
+
+    document.getElementById(cardId).style.backgroundColor = 'white';
+}
 
 
 // function for calculate area of triangle , rhombus and pentagon
